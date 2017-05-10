@@ -1,0 +1,28 @@
+<div class="modal fade" id="RecoverModal" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Recover Account</h4>
+			</div>  
+			<div class="modal-body">
+				<p>User ID: <input id="UserID" name="UserID" type="text" readonly="true" size="10"/> </p>
+				<p>Name: <input type="text" id="Name" name="Name" readonly="true" size="20"/> </p>
+				<p>This account's password will be set to default, Continue?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="submit" class="btn btn-primary">Yes</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function getName(id,name){
+		var $modal = $('#RecoverModal'),
+		$UserID = $modal.find('#UserID');
+		$UserName = $modal.find('#Name');
+		$UserID.val(id);
+		$UserName.val(name);
+		$modal.modal("show");
+	}
+</script>

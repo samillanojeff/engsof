@@ -1,0 +1,47 @@
+<div class='modal fade' id='EditActivity' tabindex='-1' role='dialog' aria-labelledby='AddModalLabel' aria-hidden='true'>
+	<div class='modal-dialog modal-sm' role='document'>
+		<div class='modal-content'>
+			<div class='modal-header'>
+				<button type='button' class='close' data-dismiss='modal'>&times;</button>
+				<h4 class='modal-title'>Edit Activity Details</h4>
+			</div>  
+			<div class='modal-body'>
+				<form>
+					<div class='input-group'>
+						<div class='text-left'>Activity Date:</div>
+						<input type='date'/>
+					</div>
+					<br/>
+					<div class='input-group'>
+						<div class='text-left'>Activity Type:</div>
+						<select name="" id="" class='form-control'>
+							
+						</select>
+					</div>
+					<br/>
+					<div class='input-group'>
+						<div class='text-left'>Activity Score:</div>
+						<input name='ActivityScore' id='ActivityScore' type='number'/>
+					</div>
+				</form>
+			</div>
+			<div class='modal-footer'>
+				<button type='button' class='btn btn-default' data-dismiss='modal'>Cancel</button>
+				<button type='button' class='btn btn-warning'>Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function getActType(code,desc){
+		var $modal = $('#EditActivity'),
+		$actID= $modal.find('#activityCode');
+		$actDate = $modal.find('#ActivityDate');
+		$actDesc = $modal.find('#ActivityDescription');
+		$actScore = $modal.find('#ActivityScore');
+		$actID.val(actID,actDate,actDesc,actScore);
+		$subjCodeEdit.val(code);
+		$subjDesc.val(desc);
+		$modal.modal("show");
+	}
+</script>

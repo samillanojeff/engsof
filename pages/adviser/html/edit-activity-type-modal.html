@@ -1,0 +1,37 @@
+<div class="modal fade" id="EditActType" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Edit Activity Type</h4>
+			</div>  
+			<div class="modal-body">
+				<div class="input-group">
+					<div class="text-left">Activity Code:</div>
+					<input type="text" class="form-control" id="activityCode" name="activityCode" style="display:none;"/>
+					<input type="text" class="form-control" id="NewActivityCode" name="NewActivityCode" value=""/>
+				</div>
+				<br/>
+				<div class="input-group">
+					<div class="text-left">Activity Description:</div>
+					<textarea cols="30" rows="3" class="form-control" id="activityDescription" name="activityDescription" value=""></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<input type="submit" class="btn btn-success" name="Edit" value="Save" />
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function getActType(code,desc){
+		var $modal = $('#EditActType'),
+		$subjCode = $modal.find('#activityCode');
+		$subjCodeEdit = $modal.find('#NewActivityCode');
+		$subjDesc = $modal.find('#activityDescription');
+		$subjCode.val(code);
+		$subjCodeEdit.val(code);
+		$subjDesc.val(desc);
+		$modal.modal("show");
+	}
+</script>

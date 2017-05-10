@@ -1,0 +1,26 @@
+<div class="modal fade" id="AddSubject" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Add Subject</h4>
+			</div>  
+			<form action="util/add-subject.php" method="POST">
+			<div class="modal-body">
+				<div class="input-group">
+					<div class="text-left">Subject Code:</div>
+					<input type="text" class="form-control" placeholder="e.g. MAPEH1" name="subjectCode" />
+				</div>
+				<br/>
+				<div class="input-group">
+					<div class="text-left">Subject Description:</div>
+					<textarea cols="30" rows="3" class="form-control" placeholder="e.g. Music, Arts, Physical Education, and Health" name="subjectDescription"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="submit" class="btn btn-success">Add</button>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>

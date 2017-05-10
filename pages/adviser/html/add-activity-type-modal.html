@@ -1,0 +1,26 @@
+<div class="modal fade" id="AddActType" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Add Activity Type</h4>
+			</div>  
+			<form action="util/add-activity-type.php" method="POST">
+			<div class="modal-body">
+				<div class="input-group">
+					<div class="text-left">Activity Code:</div>
+					<input type="text" class="form-control" placeholder="e.g. HW" name="activityCode" />
+				</div>
+				<br/>
+				<div class="input-group">
+					<div class="text-left">Activity Description:</div>
+					<textarea cols="30" rows="3" class="form-control" placeholder="e.g. Homework" name="activityDescription"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="submit" class="btn btn-success">Add</button>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>

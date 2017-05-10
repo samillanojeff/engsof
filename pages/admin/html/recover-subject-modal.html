@@ -1,0 +1,27 @@
+<div class="modal fade" id="RecoverSubject" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Recover Subject</h4>
+			</div>  
+			<form action="util/recover-subject.php" method="POST">
+				<div class="modal-body">
+					The Subject, <input type="text" name="subjectCode" id="subjectCode" size="8" readonly="true"/>
+					will be recovered. 
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<input type="submit" class="btn btn-success" value="Confirm"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+	function getSubj(code){
+		var $modal = $('#RecoverSubject'),
+		$subjCode = $modal.find('#subjectCode');
+		$subjCode.val(code);
+		$modal.modal("show");
+	}
+</script>

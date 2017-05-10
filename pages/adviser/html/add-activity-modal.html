@@ -1,0 +1,40 @@
+<div class="modal fade" id="AddActivityModal" tabindex="-1" role="dialog" aria-labelledby="AddModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Add Activity</h4>
+			</div>  
+			<div class="modal-body">
+				<div class="input-group">
+					<div class="text-left">Date:</div>
+					<input name="DateAdd" type="date" class="form-control" value="<?php echo date("Y-m-d"); ?>"/>
+				</div>
+				<br/>
+				<div class="input-group">
+					<div class="text-left">Activity Type:</div>
+					<select name="ActivityTypeAdd" class="form-control">
+						<option>-Choose-</option>
+						<?php 
+							include "../../util/dbconn.php";
+							$sql = "SELECT DISTINCT ActivityCode,ActivityDescription,isArchived FROM activitytype NATURAL JOIN user WHERE user.UserID =".$_SESSION["UserID"]." AND activitytype.isArchived = 0";
+							$result = $conn->query($sql);
+							while($row = $result->fetch_assoc()){
+								echo "<option value='".$row["ActivityCode"]."'>".$row["ActivityDescription"]."</option>";
+							}
+							$conn->close();
+						?>
+					</select>
+				</div>
+				<br/>
+				<div class="input-group">
+					<div class="text-left">Score:</div>
+					<input type="number" name="ScoreAdd" class="form-control" min="1"/>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="submit" name="Add" class="btn btn-success">Add</button>
+			</div>
+		</div>
+	</div>
+</div>

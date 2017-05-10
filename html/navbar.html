@@ -1,0 +1,30 @@
+<!-- NAVBAR -->
+			<nav class="navbar navbar-default" style="background-color:#111111; border-bottom:3px solid #c10000">
+				<div class="container-fluid">
+					<div class="navbar-btn">
+						<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-menu-circle"></i></button>
+					</div>
+					<div class="navbar-header" >
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+							<span class="sr-only">Toggle Navigation</span>
+							<i class="lnr lnr-chevron-down"></i>
+						</button>
+						<div style="color: #fff;">
+							<h4><strong class="hidden-xs">&nbsp&nbsp UB High School Class Standing Monitoring System ||</strong>UBHS-CSMS</h4>
+							<p>&nbsp&nbsp <?php echo $_SESSION["UserType"];?></p>
+						</div>
+					</div>
+					<div id="navbar-menu" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle"></i> <span style="color: #fff;"><?php echo $_SESSION["UserName"];?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="/ubhs-csms/user-profile.php"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+									<li><a href="#" data-toggle="modal" data-target="#LogoutModal"><i class="lnr lnr-exit"></i><span>Logout</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+<!-- END NAVBAR -->
