@@ -76,7 +76,7 @@
 									</thead>
 									<tbody>
 										<?php 
-											include "util/class-standing.php";
+											#include "util/class-standing.php";
 										?>
 									</tbody>
 								</table>
